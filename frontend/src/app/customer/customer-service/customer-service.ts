@@ -19,7 +19,7 @@ export class CustomerService {
     return this.httpClient.get(this.url);
   }
 
-  public getByID(idCustomer): Observable<Customer> {
+  public getById(idCustomer): Observable<Customer> {
     return this.httpClient.get<Customer>(this.url + '/' + idCustomer);
   }
   public update(customer: Customer): Observable<any> {

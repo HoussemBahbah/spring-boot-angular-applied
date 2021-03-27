@@ -9,6 +9,7 @@ import {CustomerComponent} from './customer/customer-list/customer.component'
 import { CustomerShowComponent } from './customer/customer-show/customer-show.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
+import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CustomerAddComponent } from './customer/customer-add/customer-add.compo
     CustomerShowComponent,
     NavbarComponent,
     CustomerAddComponent,
+    CustomerEditComponent,
     
   ],
   imports: [

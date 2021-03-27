@@ -1,4 +1,4 @@
-ng g component customer/customer-show --skipTests=true
+ng g component customer/customer-edit --skipTests=true
 ng generate class customer/customer-model --type=model
 ng g s services/backendApi --module=services/services.module
 ng g s customer/customer --module=app.module

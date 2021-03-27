@@ -24,7 +24,7 @@ export class CustomerAddComponent implements OnInit {
         phoneNumber: this.customer.phoneNumber
       };
 
-  this.customerService.save(data)
+  this.customerService.save(this.customer)
         .subscribe(
           response => {
             console.log(response);

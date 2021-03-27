@@ -15,31 +15,26 @@ public class CustomerService {
     private CustomerRepository customerRepository;
 
     public MessageResponse save(Customer customer){
-        boolean exist = customerRepository.existsByUserName((customer.getUserName()));
+        boolean exist = customerRepository.existsById((customer.getId()));
         if (exist) {
-            return new MessageResponse(false,"Attention","Client existe déja");
+            return new MessageResponse(false,"Not Success","Existing");
 
         }
         customerRepository.save(customer);
-        return new MessageResponse(true, "Succès", "Opération effectuée");
+        return new MessageResponse(true, "Success", "Backend responded save ok");
 
     }
 
     public MessageResponse update(Customer customer){
 
-        boolean exist = customerRepository.existsByUserName((customer.getUserName()));
-
-        if (exist) {
-            return new MessageResponse(false,"Attention","Client existe déja");
-        }
         customerRepository.save(customer);
-        return new MessageResponse(true, "Succès", "Opération effectuée");
+        return new MessageResponse(true, "Success", "Backend responded update  ok");
 
     }
 
     public MessageResponse delete(Long id) {
         customerRepository.deleteById(id);
-        return new MessageResponse(true, "Succès", "Opération effectuée");
+        return new MessageResponse(true, "Success", "Backend responded delete ok");
 
     }
 
