@@ -1,1 +1,9 @@
-<p>customer-show works!</p>
+<div class="container">
+    <form  *ngIf="customer">
+       <h2>Customer</h2>
+         <h4>id:{{customer.id}}</h4>
+         <h4>Username:{{customer.userName}}</h4>
+         <h4>Email:{{customer.email}}</h4>
+      
+   </form>            
+    </div>
