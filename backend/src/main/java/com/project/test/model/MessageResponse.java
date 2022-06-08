@@ -1,7 +1,6 @@
 package com.project.test.model;
 
 
-
 public class MessageResponse {
 
     private boolean success;

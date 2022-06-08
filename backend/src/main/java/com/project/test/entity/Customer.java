@@ -10,19 +10,19 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
     private String userName;
     private String email;
     private String phoneNumber;
 
-    public Customer(Long id, String userName, String email, String phoneNumber) {
+    public Customer(long id, String userName, String email, String phoneNumber) {
         this.id = id;
         this.userName = userName;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
