@@ -6,6 +6,7 @@ import { CustomerAddComponent } from './customer/customer-add/customer-add.compo
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { AuthGaurdService } from './service/auth-gaurd.service';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
 {path: 'list', component:CustomerComponent,canActivate:[AuthGaurdService] },
 {path: 'show/:id', component:CustomerShowComponent,canActivate:[AuthGaurdService] },
 {path: 'edit/:id', component:CustomerEditComponent,canActivate:[AuthGaurdService] },
-{ path: 'login', component: LoginComponent }
+{ path: 'login', component: LoginComponent },
+{ path: 'logout', component: LogoutComponent }
 ];
 
 @NgModule({

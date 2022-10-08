@@ -18,7 +18,10 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a *ngIf="!authenticationService.isUserLoggedIn()" routerLink="/login" class="dropdown-item" >Login</a></li>
+              <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/logout" class="dropdown-item" >Logout</a></li>
+              <li><a *ngIf="authenticationService.isUserLoggedIn()" routerLink="/add" class="dropdown-item" >Add Customer</a></li>
+              <li><a  routerLink="/list" class="dropdown-item" >List Customers</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
